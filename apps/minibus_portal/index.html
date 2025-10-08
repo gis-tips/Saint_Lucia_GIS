@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saint Lucia Minibus Portal</title>
+  <meta name="description" content="Castries–Gros Islet minibus information portal: map, leaflet (PDF), and resources." />
+  <link rel="icon" href="../assets/favicon.png" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .backdrop { background: radial-gradient(1200px 600px at 85% 10%, rgba(59,130,246,.25), transparent 60%),
+                               radial-gradient(1000px 500px at 10% 90%, rgba(16,185,129,.22), transparent 60%),
+                               linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
+  </style>
+</head>
+<body class="min-h-screen backdrop text-neutral-900 selection:bg-blue-200/50">
+  <!-- Wrapper -->
+  <main class="mx-auto max-w-5xl px-4 py-16 md:py-24">
+    <!-- Brand / Crumb -->
+    <div class="flex items-center justify-between">
+      <a href="../" class="text-sm text-neutral-500 hover:text-neutral-700">Saint Lucia / GIS</a>
+      <span class="text-xs text-neutral-400">v1.0</span>
+    </div>
+
+    <!-- Card -->
+    <section class="mt-8 md:mt-12 bg-white/70 backdrop-blur border rounded-3xl shadow-sm overflow-hidden">
+      <div class="grid md:grid-cols-2 gap-0">
+        <!-- Left: copy -->
+        <div class="p-8 md:p-12">
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+            Saint Lucia Minibus Portal
+          </h1>
+          <p class="mt-4 text-neutral-700 md:text-lg">
+            Castries-based transport guide for budget travelers and residents. Stop‑level details on highway 1A (Castries → Gros Islet), how to ride, fares, and safety tips.
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="../apps/bus_route_castries/" target="_blank"
+               class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">Open Map</a>
+
+            <a href="../assets/minibus_pamphlet.pdf" target="_blank"
+               class="inline-flex items-center justify-center px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">Open PDF Leaflet</a>
+
+            <a href="../assets/fare_table.pdf" target="_blank"
+               class="inline-flex items-center justify-center text-center  px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">Open Fare Table (PDF)</a>
+
+            <a href="../#projects"
+               class="inline-flex items-center justify-center px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">Back to Projects</a>
+          </div>
+
+          <!-- Meta line -->
+          <p class="mt-4 text-xs text-neutral-500">
+            Fare example: <span class="font-medium">2.5 EC dollars</span> (Castries ⇄ Gros Islet). Data based on fieldwork; last updated <span id="updated"></span>.
+          </p>
+        </div>
+
+        <!-- Right: visual -->
+        <div class="relative bg-gradient-to-br from-blue-50 to-emerald-50 p-6 md:p-8 flex items-center">
+          <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden border shadow-sm">
+            <!-- Hero preview (replace src) -->
+            <a href="../apps/bus_route_castries/#18/14.01069/-60.98992" target="_blank" aria-label="Open Map at Castries–Gros Islet">
+              <img src="../assets/hero.jpg" alt="Preview of the Castries–Gros Islet minibus map" class="w-full h-full object-cover hover:opacity-90 transition"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footnote -->
+    <div class="mt-8 text-xs text-neutral-500">
+      <p>Maintained by <span class="font-medium">So Shikama</span>. Built with Leaflet and GitHub Pages.</p>
+    </div>
+  </main>
+
+  <script>
+    // simple updated date filler (edit as needed)
+    document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
+  </script>
+
+  <!--
+  Placement notes:
+  - Save this file as: /apps/minibus_portal/index.html  (recommended)
+  - Then the three buttons' hrefs are already correct relative paths:
+      Open WebGIS      → ../apps/bus_route_castries/
+      Open PDF Leaflet → ../assets/minibus_pamphlet.pdf   (place your PDF here)
+      Back to Projects → ../#projects                     (goes to main index.html section)
+  - If you place this file at the repo root instead, change hrefs to:
+      Open WebGIS      → apps/bus_route_castries/
+      Open PDF Leaflet → assets/minibus_pamphlet.pdf
+      Back to Projects → #projects
+  -->
+</body>
+</html>
