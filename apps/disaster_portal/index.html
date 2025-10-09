@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saint Lucia Disaster Risk Portal</title>
+  <meta name="description" content="Saint Lucia Disaster Risk Portal - Explore disaster risks such as flood, landslide, tsunami, and fire hazards based on scientific evidence." />
+  <link rel="icon" href="../../assets/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .backdrop { background: radial-gradient(1000px 600px at 80% 10%, rgba(59,130,246,.25), transparent 60%),
+                               radial-gradient(900px 500px at 10% 90%, rgba(16,185,129,.22), transparent 60%),
+                               linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
+  </style>
+</head>
+<body class="min-h-screen backdrop text-neutral-900 selection:bg-blue-200/50">
+  <main class="mx-auto max-w-5xl px-4 py-16 md:py-24">
+    <div class="flex items-center justify-between">
+      <a href="../../" class="text-sm text-neutral-500 hover:text-neutral-700">Saint Lucia / GIS</a>
+      <span class="text-xs text-neutral-400">v1.0</span>
+    </div>
+
+    <section class="mt-8 md:mt-12 bg-white/70 backdrop-blur border rounded-3xl shadow-sm overflow-hidden">
+      <div class="grid md:grid-cols-2 gap-0">
+        <!-- Left: description -->
+        <div class="p-8 md:p-12">
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+            Saint Lucia Disaster Risk Portal
+          </h1>
+          <p class="mt-4 text-neutral-700 md:text-lg leading-relaxed">
+            Saint Lucia is a steep volcanic island facing threats from hurricanes, earthquakes, and volcanic activity.<br>
+            Based on geoscientific evidence, it is important to understand the disaster risks of your home, workplace, and school.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="../flood_map/" target="_blank" class="inline-flex items-center justify-center text-center px-5 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              Flood Risk Map
+            </a>
+
+            <a href="../landslide_map/" target="_blank" class="inline-flex items-center justify-center text-center px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">
+              Land Slide Risk Map
+            </a>
+
+            <a href="../tsunami_map/" target="_blank" class="inline-flex items-center justify-center text-center px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">
+              Tsunami Risk Map
+            </a>
+
+            <a href="../fire_station_map/" target="_blank" class="inline-flex items-center justify-center text-center px-5 py-3 rounded-2xl border border-neutral-300 bg-white/70 hover:bg-neutral-50 font-medium">
+              Fire Station Simulation Map
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: hero image -->
+        <div class="relative bg-gradient-to-br from-blue-50 to-emerald-50 p-6 md:p-8 flex items-center">
+          <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden border shadow-sm">
+            <img src="../../assets/thumb_2.jpg" alt="Disaster risk visualization for Saint Lucia" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-8 text-xs text-neutral-500">
+      <p>Maintained by <span class="font-medium">So Shikama</span>. Built with Leaflet and GitHub Pages.</p>
+    </div>
+  </main>
+</body>
+</html>
