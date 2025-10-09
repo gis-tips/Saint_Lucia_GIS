@@ -3,41 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saint Lucia | GIS & Data </title>
+  <title>Saint Lucia | GIS & Data</title>
   <meta name="description" content="Hazard & transport WebGIS (Saint Lucia) and Tableau dashboards by So Shikama." />
   <link rel="icon" href="assets/favicon.png" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Saint Lucia | GIS & Data" />
-  <meta property="og:description" content="Hazard & transport WebGIS (Saint Lucia) and Tableau dashboards." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.jpg" />
-  <meta property="og:url" content="https://<YOUR-USERNAME>.github.io/<REPO>/" />
-
-  <!-- Tailwind (CDN build for quick start) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Simple responsive iframe frame with 16:9 ratio */
-    .embed {
-      position: relative; width: 100%; padding-top: 56.25%;
-    }
+    .embed { position: relative; width: 100%; padding-top: 56.25%; }
     .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   </style>
-  
-  <!-- JSON-LD schema.org (Person + CreativeWork aggregate) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "So Shikama",
-    "jobTitle": "GIS / Data Analyst",
-    "url": "https://<YOUR-USERNAME>.github.io/<REPO>/",
-    "knowsAbout": ["GIS", "QGIS", "MapLibre", "Leaflet", "Hazard Mapping", "Transport", "Tableau"],
-    "workExample": [{"@type":"CreativeWork", "name":"Saint Lucia Hazard Map (WebGIS)", "url":"https://<YOUR-USERNAME>.github.io/<MAP-REPO>/index.html"}]
-  }
-  </script>
 </head>
 <body class="bg-neutral-50 text-neutral-900">
-  <!-- Header -->
+
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="font-semibold">Saint Lucia / GIS</a>
@@ -50,174 +26,112 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="bg-gradient-to-b from-blue-50 to-white border-b">
     <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-3xl md:text-5xl font-bold leading-tight">Saint Lucia Spatial Data Visualization Project</h1>
-        <p class="mt-4 text-neutral-700">Hazard & transport mapping, spatial analysis, and interactive dashboards. Selected works created during overseas volunteer service in Saint Lucia and ongoing research.</p>
+        <p class="mt-4 text-neutral-700">public transportation, natural hazard information, education. Selected works created during overseas volunteer service in Saint Lucia and ongoing research.</p>
         <div class="mt-6 flex gap-3">
           <a href="#projects" class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700">See Projects</a>
-          
         </div>
       </div>
       <div class="relative">
-        <a href="https://gis-tips.github.io/Saint_Lucia_GIS/apps/minibus_portal/" >
+        <a href="apps/minibus_portal/" target="_blank">
           <img src="assets/hero.jpg" alt="Saint Lucia GIS maps preview" class="rounded-2xl shadow hover:opacity-90 transition" loading="lazy"/>
         </a>
       </div>
-      
     </div>
   </section>
 
-  <!-- Projects (WebGIS) -->
   <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
     <div class="flex items-end justify-between gap-6">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold">WebGIS Projects</h2>
-        <p class="text-neutral-700 mt-1">Hazard maps, transport networks, and planning overlays (hosted on GitHub Pages).</p>
+        <p class="text-neutral-700 mt-1">public transportation, natural hazard information, education (hosted on GitHub Pages).</p>
       </div>
       <div>
-        <a href="https://github.com/<YOUR-USERNAME>?tab=repositories" class="text-sm underline">View source on GitHub →</a>
+        <a href="https://github.com/gis-tips?tab=repositories" target="_blank" class="text-sm underline">View source on GitHub →</a>
       </div>
     </div>
 
     <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <!-- Card 1: Hazard Map -->
       <article class="bg-white rounded-2xl p-4 shadow border">
-        <img src="assets/thumb_hazard.jpg" alt="Hazard map thumbnail" class="rounded-xl mb-3" loading="lazy"/>
-        <h3 class="font-semibold">Saint Lucia — Multi‑Hazard Map</h3>
-        <p class="text-sm text-neutral-700 mt-1">Layered hazards (flood, landslide, hurricane) + shelters & clinics; smartphone‑ready UI and offline‑aware tiles.</p>
+        <img src="assets/thumb_transport.jpg" alt="Transport map thumbnail" class="rounded-xl mb-3"/>
+        <h3 class="font-semibold">Castries-based Transport Map Saint Lucia</h3>
+        <p class="text-sm text-neutral-700 mt-1">Interactive route map with detailed stops, tourist-friendly pamphlet, and fare table. For example, Castries to town is only 2.5 EC dollars per ride.</p>
         <div class="mt-3 flex gap-2">
-          <a class="px-3 py-1.5 rounded-lg bg-blue-600 text-white text-sm" target="_blank" href="https://<YOUR-USERNAME>.github.io/<MAP-REPO>/index.html">Open app</a>
-          <button class="px-3 py-1.5 rounded-lg border text-sm" data-embed="#embed-hazard">Embed</button>
-        </div>
-        <div id="embed-hazard" class="mt-3 hidden">
-          <div class="embed rounded-xl overflow-hidden border">
-            <iframe title="Hazard WebGIS" loading="lazy" allowfullscreen src="https://<YOUR-USERNAME>.github.io/<MAP-REPO>/index.html"></iframe>
-          </div>
+          <a href="apps/minibus_portal/" target="_blank" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm">Open Portal</a>
         </div>
       </article>
 
-      <!-- Card 2: Transport Map -->
       <article class="bg-white rounded-2xl p-4 shadow border">
-        <img src="assets/thumb_transport.jpg" alt="Transport map thumbnail" class="rounded-xl mb-3" loading="lazy"/>
-        <h3 class="font-semibold">Castries-based Transport Map</h3>
-        <p class="text-sm text-neutral-700 mt-1">Covers the main highway 1A from Castries to Gros Islet with stop-level details; minibus routes, headways, and custom icons; just 2.5 EC dollars per ride; built with Leaflet.</p>
+        <img src="assets/thumb_hazard.jpg" alt="Hazard map thumbnail" class="rounded-xl mb-3"/>
+        <h3 class="font-semibold">Saint Lucia Multi-Hazard Map</h3>
+        <p class="text-sm text-neutral-700 mt-1">Hazard maps of flood, landslide, and hurricane, combined with a simulation map of fire engine response time.</p>
         <div class="mt-3 flex gap-2">
-  <a class="px-3 py-1.5 rounded-lg bg-blue-600 text-white text-sm" target="_blank" href="apps/bus_route_castries/">Open app</a>
-  <button class="px-3 py-1.5 rounded-lg border text-sm" data-embed="#embed-transport">Embed</button>
-</div>
-<div id="embed-transport" class="mt-3 hidden">
-  <div class="embed rounded-xl overflow-hidden border">
-    <iframe title="Transport WebGIS" loading="lazy" allowfullscreen src="apps/bus_route_castries/"></iframe>
-  </div>
-</div>
-</article>
-
-      <!-- Card 3: Shelter Locator -->
-      <article class="bg-white rounded-2xl p-4 shadow border">
-        <img src="assets/thumb_shelter.jpg" alt="Shelter locator thumbnail" class="rounded-xl mb-3" loading="lazy"/>
-        <h3 class="font-semibold">Shelter & Facility Locator</h3>
-        <p class="text-sm text-neutral-700 mt-1">Find nearest shelters, clinics, and key services; mobile geolocation and isochrone hints.</p>
-        <div class="mt-3 flex gap-2">
-          <a class="px-3 py-1.5 rounded-lg bg-blue-600 text-white text-sm" target="_blank" href="https://<YOUR-USERNAME>.github.io/<SHELTER-REPO>/index.html">Open app</a>
-          <button class="px-3 py-1.5 rounded-lg border text-sm" data-embed="#embed-shelter">Embed</button>
+          <a href="apps/disaster_portal/" target="_blank" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm">Open Portal</a>
         </div>
-        <div id="embed-shelter" class="mt-3 hidden">
-          <div class="embed rounded-xl overflow-hidden border">
-            <iframe title="Shelter WebGIS" loading="lazy" allowfullscreen src="https://<YOUR-USERNAME>.github.io/<SHELTER-REPO>/index.html"></iframe>
-          </div>
+      </article>
+
+      <article class="bg-white rounded-2xl p-4 shadow border">
+        <img src="assets/thumb_shelter.jpg" alt="District map thumbnail" class="rounded-xl mb-3"/>
+        <h3 class="font-semibold">District Map</h3>
+        <p class="text-sm text-neutral-700 mt-1">An interactive map designed to help primary school students learn the locations of different areas across the island. The color scheme is inspired by traditional Creole colors.</p>
+        <div class="mt-3 flex gap-2">
+          <a href="https://gis-tips.github.io/district/" target="_blank" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm">Open app</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl p-4 shadow border">
+        <img src="assets/thumb_mangroves.jpg" alt="Mangroves map thumbnail" class="rounded-xl mb-3"/>
+        <h3 class="font-semibold">Mangroves Map</h3>
+        <p class="text-sm text-neutral-700 mt-1">Mangrove forests grow in coastal areas where seawater and freshwater mix, forming brackish zones. To protect these forests and the island’s beautiful environment, it is important not to throw garbage into rivers.</p>
+        <div class="mt-3 flex gap-2">
+          <a href="https://gis-tips.github.io/leaflet_mangroves/" target="_blank" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm">Open app</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- Tableau -->
-  <section id="tableau" class="bg-neutral-100 border-y">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-2xl md:text-3xl font-bold">Tableau Dashboards</h2>
-      <p class="text-neutral-700 mt-1">Published on Tableau Public. Replace the URL with your workbook/view IDs.</p>
-
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <!-- Tableau example 1 -->
-        <article class="bg-white rounded-2xl p-4 shadow border">
-          <h3 class="font-semibold">Tourism & Mobility — KPIs</h3>
-          <div class="embed rounded-xl overflow-hidden border mt-3">
-            <iframe title="Tableau KPI" loading="lazy" allowfullscreen src="https://public.tableau.com/views/WORKBOOK_NAME/VIEW_NAME?:showVizHome=no&:embed=true"></iframe>
-          </div>
-          <div class="mt-2 text-xs text-neutral-600">Tip: Use Tableau Public → Share → Embed Code; you can paste the iframe <em>src</em> URL here.</div>
-        </article>
-
-        <!-- Tableau example 2 -->
-        <article class="bg-white rounded-2xl p-4 shadow border">
-          <h3 class="font-semibold">Hazard Exposure — Small Areas</h3>
-          <div class="embed rounded-xl overflow-hidden border mt-3">
-            <iframe title="Tableau Exposure" loading="lazy" allowfullscreen src="https://public.tableau.com/views/ANOTHER_WORKBOOK/ANOTHER_VIEW?:showVizHome=no&:embed=true"></iframe>
-          </div>
-        </article>
+  <!-- Tableau Section -->
+  <section id="tableau" class="max-w-6xl mx-auto px-4 py-16 border-t">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Tableau Dashboards</h2>
+    <p class="text-neutral-700 mb-6">Interactive dashboards created with Tableau to visualize census data in Saint Lucia.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl p-4 shadow border">
+        <h3 class="font-semibold mb-2">Urban Density Visualization</h3>
+        <p class="text-sm text-neutral-700 mb-3">Analyzing the spatial distribution of population and residential buildings in Castries.</p>
+        <a href="#" class="text-blue-600 underline text-sm">View on Tableau →</a>
+      </div>
+      <div class="bg-white rounded-2xl p-4 shadow border">
+        <h3 class="font-semibold mb-2">Environmental Change Dashboard</h3>
+        <p class="text-sm text-neutral-700 mb-3">Comparing vegetation and coastal changes using satellite imagery.</p>
+        <a href="#" class="text-blue-600 underline text-sm">View on Tableau →</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-3 gap-8 items-start">
-      <div>
-        <img src="assets/profile.jpg" alt="So Shikama" class="rounded-2xl shadow" loading="lazy"/>
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-16 border-t">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">About</h2>
+    <div class="grid md:grid-cols-3 gap-6 items-center">
+      <div class="md:col-span-1">
+        <img src="assets/profile.jpg" alt="Profile photo" class="rounded-xl w-48 h-auto mx-auto shadow"/>
       </div>
       <div class="md:col-span-2">
-        <h2 class="text-2xl md:text-3xl font-bold">About</h2>
-        <p class="mt-3 text-neutral-700 leading-relaxed">GIS Engineer / Spatial Data Analyst with experience in hazard and transport WebGIS and data visualization using GIS, R, Python, Tableau.</p>
-        
-        <div class="mt-4 flex gap-3">
-          
-          <a href="mailto:you@example.com" class="px-4 py-2 rounded-xl bg-neutral-900 text-white">Contact</a>
-        </div>
+        <p class="text-neutral-700 leading-relaxed">GIS Engineer / Spatial Data Analyst. Experienced in GIS, R, Python, and Tableau.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-neutral-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-6 items-center">
-      <div class="md:col-span-2">
-        <h2 class="text-2xl md:text-3xl font-bold">Get in touch</h2>
-        <p class="mt-2 text-neutral-300">For collaboration, research inquiries, or media requests, feel free to reach out.</p>
-      </div>
-      <div class="flex gap-3 md:justify-end">
-        <a href="mailto:you@example.com" class="px-4 py-2 rounded-xl bg-white text-neutral-900">Email</a>
-        <a href="https://www.youtube.com/@<YOUR-CHANNEL>" target="_blank" class="px-4 py-2 rounded-xl border border-white/30">YouTube</a>
-        <a href="https://github.com/<YOUR-USERNAME>" target="_blank" class="px-4 py-2 rounded-xl border border-white/30">GitHub</a>
-      </div>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16 border-t text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Get in Touch</h2>
+    <p class="text-neutral-700 mb-6">For collaboration, research exchange, or portfolio inquiries, feel free to contact me.</p>
+    <a href="mailto:soshikama@gmail.com" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">Contact via Email</a>
   </section>
 
-  <footer class="text-center text-sm text-neutral-500 py-6">
-    © <span id="y"></span> So Shikama — Built on GitHub Pages
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Simple embed toggler
-    document.querySelectorAll('button[data-embed]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = document.querySelector(btn.getAttribute('data-embed'));
-        target.classList.toggle('hidden');
-      });
-    });
-  </script>
-
-  <!--
-  HOW TO USE (Quick Notes):
-  1) Replace <YOUR-USERNAME>, <REPO>, and map repo names with your actual GitHub info.
-  2) Put images into /assets (hero.jpg, profile.jpg, thumbs). Keep them light (<300 KB each).
-  3) Replace Tableau iframe URLs with yours from Tableau Public (Share → Embed → copy src).
-  4) Replace email address and social links.
-  5) Commit this file as index.html to a GitHub repo; enable GitHub Pages (Settings → Pages → Source: main branch / root).
-  6) Optional: Add custom domain via Settings → Pages → Custom domain and create a CNAME in your DNS.
-  7) Accessibility: add descriptive alt text for all images; ensure sufficient color contrast.
-  -->
+  <footer class="text-center text-sm text-neutral-500 py-6 border-t">© <span id="y"></span> So Shikama — Built on GitHub Pages</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
