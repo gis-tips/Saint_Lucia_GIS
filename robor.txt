@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gis-tips.github.io/Saint_Lucia_GIS/sitemap.xml

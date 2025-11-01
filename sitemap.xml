@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main site -->
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Minibus portal -->
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/minibus_portal/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bus map -->
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/bus_route_castries/</loc>
+  </url>
+
+  <!-- Disaster / hazard portals -->
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/disaster_portal/</loc>
+  </url>
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/flood_map/</loc>
+  </url>
+  <url>
+    <loc>https://sgis-tips.github.io/Saint_Lucia_GIS/apps/landslide_map/</loc>
+  </url>
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/tsunami_map/</loc>
+  </url>
+  <url>
+    <loc>https://gis-tips.github.io/Saint_Lucia_GIS/apps/fire_station_map/</loc>
+  </url>
+
+  <!-- External learning maps (not hosted inside repo but useful for SEO) -->
+  <url>
+    <loc>https://gis-tips.github.io/district/</loc>
+  </url>
+  <url>
+    <loc>https://gis-tips.github.io/leaflet_mangroves/</loc>
+  </url>
+
+</urlset>
